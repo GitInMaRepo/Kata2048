@@ -36,10 +36,21 @@ namespace Kata2048
             }
             board[three][four] = 2;
         }
+        internal void Initialize(List<int[]> newBoard)
+        {
+            board = newBoard;
+        }
 
         internal List<int[]> GetState()
         {
             return board;
+        }
+
+        internal void DoMove(Key down)
+        {
+            var zeile = board[1];
+            board[1] = board[3];            
+            board[3] = zeile;            
         }
     }
 }
