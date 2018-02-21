@@ -138,6 +138,8 @@ namespace Kata2048
 
     internal enum Key
     {
-        Down=1
+        Down=1,
+        Up = 2,
+        None = 3
     }
 }

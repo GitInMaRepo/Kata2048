@@ -48,9 +48,43 @@ namespace Kata2048
 
         internal void DoMove(Key down)
         {
-            var zeile = board[1];
-            board[1] = board[3];            
-            board[3] = zeile;            
+            switch (down)
+            {
+                case Key.Down:
+                    if (board[3][2] == 2)
+                    {
+                        MoveDown();
+                        break;
+                    }
+                    var zeile = board[1];
+                    board[1] = board[3];
+                    board[3] = zeile;
+                    break;
+                case Key.Up:
+                    var zeileUp = board[1];
+                    board[1] = board[0];
+                    board[0] = zeileUp;
+                    break;
+                case Key.None:
+                    break;
+            }
+        }
+
+        private void MoveDown()
+        {
+            for (int j = 0; j < board.Count - 1; j++)
+            {
+                var row = board[j];
+                for (int i = 0; i < row.Length; i++)
+                {
+                    var cell = row[i];
+                    if (cell != 0)
+                    {
+                        board[3][i] = cell;
+                        row[i] = 0;
+                    }
+                }
+            }
         }
     }
 }

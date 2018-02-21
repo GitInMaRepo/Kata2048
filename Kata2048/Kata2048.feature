@@ -16,3 +16,33 @@ Dann soll das Spielfeld so aussehen
 | 0   | 0   | 0   | 0   |
 | 0   | 0   | 0   | 0   |
 | 0   | 2   | 0   | 2   |
+
+Szenario: Nach Start drückt Benutzer nach oben
+Gegeben sei das Spield ist vorbelegt mit 
+| Sp1 | Sp2 | Sp3 | Sp4 |
+| 0   | 0   | 0   | 0   |
+| 0   | 2   | 0   | 2   |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 0   |
+Wenn ich die Pfeiltaste "nach oben" drücke
+Dann soll das Spielfeld so aussehen
+| Sp1 | Sp2 | Sp3 | Sp4 |
+| 0   | 2   | 0   | 2   |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 0   |
+
+Szenario: Nach zweiten Zug drückt Benutzer nach unten
+Gegeben sei das Spield ist vorbelegt mit 
+| Sp1 | Sp2 | Sp3 | Sp4 |
+| 0   | 0   | 0   | 0   |
+| 0   | 2   | 0   | 0   |
+| 2   | 0   | 0   | 0   |
+| 0   | 0   | 2   | 0   |
+Wenn ich die Pfeiltaste "nach unten" drücke
+Dann soll das Spielfeld so aussehen
+| Sp1 | Sp2 | Sp3 | Sp4 |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 0   |
+| 2   | 2   | 2   | 0   |

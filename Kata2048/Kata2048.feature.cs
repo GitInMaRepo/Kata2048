@@ -152,6 +152,146 @@ testRunner.Then("soll das Spielfeld so aussehen", ((string)(null)), table2, "Dan
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Nach Start drückt Benutzer nach oben")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Kata2048")]
+        public virtual void NachStartDrucktBenutzerNachOben()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nach Start drückt Benutzer nach oben", ((string[])(null)));
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Sp1",
+                        "Sp2",
+                        "Sp3",
+                        "Sp4"});
+            table3.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table3.AddRow(new string[] {
+                        "0",
+                        "2",
+                        "0",
+                        "2"});
+            table3.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table3.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+#line 21
+testRunner.Given("das Spield ist vorbelegt mit", ((string)(null)), table3, "Gegeben sei ");
+#line 27
+testRunner.When("ich die Pfeiltaste \"nach oben\" drücke", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Sp1",
+                        "Sp2",
+                        "Sp3",
+                        "Sp4"});
+            table4.AddRow(new string[] {
+                        "0",
+                        "2",
+                        "0",
+                        "2"});
+            table4.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table4.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table4.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+#line 28
+testRunner.Then("soll das Spielfeld so aussehen", ((string)(null)), table4, "Dann ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Nach zweiten Zug drückt Benutzer nach unten")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Kata2048")]
+        public virtual void NachZweitenZugDrucktBenutzerNachUnten()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nach zweiten Zug drückt Benutzer nach unten", ((string[])(null)));
+#line 35
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Sp1",
+                        "Sp2",
+                        "Sp3",
+                        "Sp4"});
+            table5.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table5.AddRow(new string[] {
+                        "0",
+                        "2",
+                        "0",
+                        "0"});
+            table5.AddRow(new string[] {
+                        "2",
+                        "0",
+                        "0",
+                        "0"});
+            table5.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "2",
+                        "0"});
+#line 36
+testRunner.Given("das Spield ist vorbelegt mit", ((string)(null)), table5, "Gegeben sei ");
+#line 42
+testRunner.When("ich die Pfeiltaste \"nach unten\" drücke", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Sp1",
+                        "Sp2",
+                        "Sp3",
+                        "Sp4"});
+            table6.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table6.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table6.AddRow(new string[] {
+                        "0",
+                        "0",
+                        "0",
+                        "0"});
+            table6.AddRow(new string[] {
+                        "2",
+                        "2",
+                        "2",
+                        "0"});
+#line 43
+testRunner.Then("soll das Spielfeld so aussehen", ((string)(null)), table6, "Dann ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

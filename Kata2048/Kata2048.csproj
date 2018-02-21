@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Kata2048.feature</DependentUpon>
     </Compile>
+    <Compile Include="Kata2048.steps.cs" />
     <Compile Include="Spielfeld.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
