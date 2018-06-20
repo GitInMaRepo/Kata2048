@@ -1,0 +1,15 @@
+<div class="readonly" [style.visibility]="!showReadWrite ? 'visible' : 'hidden'">
+  {{inputtext}}
+</div>
+<div class="readwrite" [style.visibility]="showReadWrite ? 'visible' : 'hidden'">
+  <input [(ngModel)]="inputtext">
+</div>
+<button class="edit" (click)="onButtonClick()" [style.visibility]="!showReadWrite ? 'visible' : 'hidden'">
+  Edit!
+</button>
+<button class="save" (click)="onSaveClick()" [style.visibility]="showReadWrite ? 'visible' : 'hidden'">
+  Save!
+</button>
+<button id="delete" (click)="onDeleteClick()">
+  Delete
+</button>

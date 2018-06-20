@@ -48,7 +48,7 @@ namespace Kata2048
 
             for (int i = 0; i < currentState.Count; i++)
             {
-                currentState[i].ShouldBeEquivalentTo(expected[i]);
+                currentState[i].Should().BeEquivalentTo(expected[i]);
             }            
         }
 

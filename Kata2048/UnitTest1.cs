@@ -53,7 +53,7 @@ namespace Kata2048
 
             List<int[]> expected = CreateLayout1();
 
-            currentState.ShouldAllBeEquivalentTo(expected);
+            currentState.Should().BeEquivalentTo(expected);
         }
 
         [TestMethod]
@@ -85,7 +85,7 @@ namespace Kata2048
 
             for(int i=0; i < currentState.Count; i++)
             {
-                currentState[i].ShouldBeEquivalentTo(expected[i]);
+                currentState[i].Should().BeEquivalentTo(expected[i]);
             }
         }
 
