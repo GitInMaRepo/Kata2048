@@ -18,27 +18,27 @@ describe('AppComponent', () => {
     compiled2 = fixture2.debugElement.nativeElement;
   }));
 
-  it('should create the app', async(() => {
+  xit('should create the app', async(() => {
     const app = fixture2.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
 
-  it('should show the readonly text area', async(() => {
+  xit('should show the readonly text area', async(() => {
     fixture2.detectChanges();
     expect(compiled2.querySelector('.readonly').style.visibility).toBe('visible');
   }));
 
-  it('should not show the editable text area', async(() => {
+  xit('should not show the editable text area', async(() => {
     fixture2.detectChanges();
     expect(compiled2.querySelector('.readwrite').style.visibility).toBe('hidden');
   }));
 
-  it('should show the edit button', async(() => {
+  xit('should show the edit button', async(() => {
     fixture2.detectChanges();
     expect(compiled2.querySelector('.edit').style.visibility).toBeDefined();
   }));
 
-  it('should not show the readonly text area on edit button click', async(() => {
+  xit('should not show the readonly text area on edit button click', async(() => {
     fixture2.detectChanges();
     fixture2.componentInstance.onButtonClick();
     fixture2.detectChanges();
