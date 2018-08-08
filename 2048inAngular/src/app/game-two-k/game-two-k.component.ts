@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 export class GameTwoKComponent implements OnInit {
 
   fields: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  letzteReihe = 4;
+  naechsteReihe = 4;
   constructor() { }
 
   ngOnInit() {
@@ -16,18 +18,27 @@ export class GameTwoKComponent implements OnInit {
     }
 
   startGame() {
-    this.fields[1] = 2;
-    this.fields[6] = 2;
+    const randomNumber1 = Math.floor(Math.random() * 15) + 1;
+    this.fields[randomNumber1] = 2;
+    let randomNumber2 = Math.floor(Math.random() * 15) + 1;
+    while (randomNumber2 === randomNumber1) {
+      randomNumber2 = Math.floor(Math.random() * 15) + 1;
+    }
+    this.fields[randomNumber2] = 2;
     console.log(this.fields);
     }
 
   moveDown() {
-    for (let i = 0; i < this.fields.length - 4; i++) {
-     if (this.fields[i] !== 0) {
-      this.fields[i + 4] = this.fields[i];
+    for (let i = 0; i < this.fields.length -  this.letzteReihe; i++) {
+     if (this.hatInhalt(i)) {
+      this.fields[i + this.naechsteReihe] = this.fields[i];
       this.fields[i] = 0;
      }
     }
+  }
+
+  private hatInhalt(i: number) {
+    return this.fields[i] !== 0;
   }
 
   moveUp() {
